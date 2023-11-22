@@ -1,41 +1,17 @@
 # Prueba-crazyimagine (prueba-tecnica-crazyimagine)
 
-A Quasar Project
+Esta es la prueba tecnica de desarrollador Vue de Crazy Imagine.
 
-## Install the dependencies
+## Como correr el proyecto
+
+Se debe tener instalado Quasar en la carpeta de proyecto, se puede instalar con
+
 ```bash
-yarn
-# or
-npm install
+npm install quasar
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+Luego se ejecuta el proyecto en desarrollo con el siguiente comando
+
 ```bash
 quasar dev
 ```
-
-
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-
-### Format the files
-```bash
-yarn format
-# or
-npm run format
-```
-
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

@@ -15,6 +15,7 @@ export const useUserStore = defineStore("user", {
   },
 
   actions: {
+    // LLAMA AL METODO DE REGISTRO DE FIREBASE
     async registro(email, password, name) {
       try {
         await createUserWithEmailAndPassword(auth, email, password);
@@ -35,6 +36,7 @@ export const useUserStore = defineStore("user", {
       }
     },
 
+    // LLAMA AL METODO DE INICIO DE SESION DE FIREBASE
     async login(email, password) {
       try {
         await signInWithEmailAndPassword(auth, email, password);

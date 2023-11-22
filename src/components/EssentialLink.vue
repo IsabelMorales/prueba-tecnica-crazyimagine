@@ -1,4 +1,5 @@
 <template>
+  <!-- SE TIENEN LOS ELEMENTOS DEL MENU-->
   <q-item clickable tag="a" :href="link">
     <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" color="secondary" />

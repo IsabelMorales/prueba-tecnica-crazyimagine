@@ -10,15 +10,19 @@
           </div>
           <div class="row justify-center q-mt-md">
             <div class="col-11 col-md-6 q-mb-md q-pl-lg q-pr-md">
+              <!-- CAMPO NOMBRE-->
               <q-input v-model="nombre" label="Nombre" autofocus />
             </div>
             <div class="col-11 col-md-6 q-mb-md q-pr-lg q-pl-md">
+              <!-- CAMPO APELLIDO -->
               <q-input v-model="apellido" label="Apellido" />
             </div>
             <div class="col-11 col-md-6 q-mb-md q-pl-lg q-pr-md">
+              <!-- CAMPO EMAIL -->
               <q-input v-model="email" label="Email" />
             </div>
             <div class="col-11 col-md-6 q-pr-lg q-pl-md">
+              <!-- CAMPO DE CONTRASEÑA -->
               <q-input
                 v-model="password"
                 label="Contraseña"
@@ -37,6 +41,7 @@
               </q-input>
             </div>
             <div class="col-11 col-md-7 q-my-md">
+              <!-- IMAGEN DE PERFIL -->
               <q-file
                 rounded
                 outlined
@@ -64,7 +69,7 @@
           </div>
         </q-card-section>
         <q-card-actions align="center" class="q-mb-md" vertical>
-          <!-- INICIAR SESION -->
+          <!-- REGISTRARSE -->
           <q-btn
             unelevated
             label="Registrarse"
@@ -73,6 +78,7 @@
             @click="onSubmit()"
           >
           </q-btn>
+          <!-- CANCELAR REGISTRO-->
           <q-btn
             flat
             no-caps
@@ -110,7 +116,7 @@ export default {
   },
 
   methods: {
-    // ENVIAR CLIENTE //
+    // ENVIAR CLIENTE A LA VISTA PADRE//
     onSubmit() {
       let cuenta = {
         nombre: this.nombre,
@@ -123,6 +129,7 @@ export default {
       this.$emit("crearCuenta", cuenta);
     },
 
+    // CANCELAR REGISTRO //
     onCancel() {
       this.$emit("cancelarRegistro", false);
     },

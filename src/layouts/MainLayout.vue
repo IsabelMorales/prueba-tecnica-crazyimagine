@@ -13,6 +13,7 @@
 
         <q-toolbar-title>Prueba tecnica Crazy Imagine</q-toolbar-title>
         <q-space />
+        <!-- SOLO APARECE CUANDO SE INICIA SESION -->
         <h6 class="q-my-none q-mr-sm" v-if="this.userStore.from == 'login'">
           Bienvenido usuario
           <q-avatar>

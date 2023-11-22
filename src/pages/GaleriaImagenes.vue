@@ -7,6 +7,7 @@
             <div class="text-h5 text-medium">Galeria de imagenes</div>
           </q-card-section>
           <q-card-section>
+            <!-- CARRUSEL DE IMAGENES -->
             <q-carousel
               v-model="slide"
               transition-prev="jump-right"
@@ -51,8 +52,8 @@ export default {
   },
 
   methods: {
+    // SE TRAE LAS IMAGENES DESDE LA API DE PEXELS
     async llenarGaleria() {
-      //let datos = await axios.get("https://api.pexels.com/v1/search?query=university" + this.id);
       const client = createClient(
         "P0T0XXNoanO1hrmg9gvjgQOp3kQGN75tSK6uxVRPB19eBSFpbiXsHeuN"
       );

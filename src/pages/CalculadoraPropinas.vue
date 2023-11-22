@@ -12,6 +12,7 @@
           <q-card-section>
             <div class="row q-gutter-lg q-mb-sm q-lg-pl-md justify-center">
               <div class="col-10 col-md-2">
+                <!-- CAMPO MONTO DE LA FACTURA -->
                 <q-input
                   v-model="montoFactura"
                   label="Monto total de factura $"
@@ -20,6 +21,7 @@
                 />
               </div>
               <div class="col-10 col-md-2">
+                <!-- CAMPO PORCENTAJE DE PROPINA -->
                 <q-select
                   v-model="porcentajePropina"
                   :options="porcentajesData"
@@ -31,6 +33,7 @@
                 </q-select>
               </div>
               <div class="col-12 col-md-1">
+                <!-- BOTON CALCULAR PROPINA -->
                 <q-btn
                   color="secondary"
                   label="Calcular"
@@ -43,6 +46,7 @@
                 class="col-12 col-md-5 text-subtitle1"
                 v-if="this.mostrarTotal == true"
               >
+                <!-- MUESTRA LOS TOTALES -->
                 <p>
                   Monto de propina: {{ this.montoPropina }}$ <br />
                   Total a pagar: {{ this.montoTotal }}$
@@ -80,6 +84,8 @@ export default {
   },
 
   methods: {
+    // CALCULA EL MONTO DE PROPINA EN BASE AL MONTO TOTAL DE LA FACTURA Y EL PORCENTAJE
+    // DE PROPINA DADO Y SE LO SUMA AL MONTO TOTAL DE LA FACTURA
     calcularPropina() {
       console.log(this.porcentajePropina);
       this.montoPropina = (this.porcentajePropina * this.montoFactura) / 100;
